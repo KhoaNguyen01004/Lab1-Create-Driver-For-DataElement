@@ -7,6 +7,8 @@ public class MovieDriver{
         String movieName;
         String movieRate; 
         String again;
+        String end = "Goodbye!!";
+        String error = "I don't understand, please type again: ";
         int ticket;
         while (1<2)
         {
@@ -26,6 +28,7 @@ public class MovieDriver{
             again = stdin.next();
             if (again.equals("n"))
             {
+                System.out.print(end);
                 System.exit(0);
             }
             else
@@ -38,10 +41,11 @@ public class MovieDriver{
                     }
                     else if (again.equals("n"))
                     {
+                        System.out.print(end);
                         System.exit(0);
                     }
                     else
-                    {   System.out.println("I don't understand, please type again: ");
+                    {   System.out.println(error);
                         again = stdin.next();
                     }
                 }
