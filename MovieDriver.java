@@ -4,21 +4,45 @@ public class MovieDriver{
 
     public static void main(String[] args)
     {
-        String movieName, movieRate;
+        String movieName;
+        String movieRate; 
+        String again;
         int ticket;
-
-        Scanner stdin = new Scanner (System.in);
-        Movie a = new Movie();
-        System.out.println("Please enter the movie's name: ");
-        movieName = stdin.nextLine();
-        a.setTitle(movieName);
-        System.out.println("Please enter the movie's rating: ");
-        movieRate = stdin.nextLine();
-        a.setRating(movieRate);
-        System.out.println("Please enter the number of ticket sold at the (unnamed) movie theater: ");
-        ticket = stdin.nextInt();
-        a.setSoldTickets(ticket);
-        System.out.println(a.toString());
-        
+        while (1<2)
+        {
+            Scanner stdin = new Scanner (System.in);
+            Movie a = new Movie();
+            System.out.println("Please enter the movie's name: ");
+            movieName = stdin.nextLine();
+            a.setTitle(movieName);
+            System.out.println("Please enter the movie's rating: ");
+            movieRate = stdin.nextLine();
+            a.setRating(movieRate);
+            System.out.println("Please enter the number of ticket sold at the (unnamed) movie theater: ");
+            ticket = stdin.nextInt();
+            a.setSoldTickets(ticket);
+            System.out.println(a.toString());
+            System.out.println("Do you want to enter another movie? (y or n):");
+            again = stdin.next();
+            if (again.equals("n"))
+            {
+                break;
+            }
+            else
+            {
+                while (1<2)
+                {
+                    if (again.equals("y") || again.equals("n"))
+                    {
+                        break;
+                    }
+                    else
+                    {   System.out.println("I don't understand, please type again: ");
+                        again = stdin.next();
+                    }
+                }
+            }
+            stdin.close();
+        }
     }
 }
