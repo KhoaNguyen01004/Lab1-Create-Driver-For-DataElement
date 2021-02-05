@@ -26,15 +26,19 @@ public class MovieDriver{
             again = stdin.next();
             if (again.equals("n"))
             {
-                break;
+                System.exit(0);
             }
             else
             {
                 while (1<2)
                 {
-                    if (again.equals("y") || again.equals("n"))
+                    if (again.equals("y"))
                     {
                         break;
+                    }
+                    else if (again.equals("n"))
+                    {
+                        System.exit(0);
                     }
                     else
                     {   System.out.println("I don't understand, please type again: ");
@@ -42,7 +46,6 @@ public class MovieDriver{
                     }
                 }
             }
-            stdin.close();
         }
     }
 }
